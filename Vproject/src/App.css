@@ -14,7 +14,7 @@ font-family: 'Kablammo', cursive;
 * {font-family: 'Gamja Flower', cursive; box-sizing: border-box; padding: 0; margin: 0;}
 ul, li { list-style: none;}
 input, button {padding: 4px 10px; font-size: 1em; border: none;}
-.btn { border-radius: 6px; box-shadow: 0 0 3px #888; transition: all 0.2s;}
+.btn { background-color: #ccc; border-radius: 6px; box-shadow: 0 0 3px #888; transition: all 0.2s;}
 .btn:hover { box-shadow: 0 0 6px #888; background-color: #fff;}
 button:hover {cursor: pointer;}
 #root { max-width: 1280px; margin: 0 auto;}
