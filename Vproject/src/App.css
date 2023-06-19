@@ -13,12 +13,13 @@ font-family: 'Kablammo', cursive;
 
 * {font-family: 'Gamja Flower', cursive; box-sizing: border-box; padding: 0; margin: 0;}
 ul, li { list-style: none;}
-input, button {padding: 5px 10px; font-size: 1em; border: none;}
+input, button {padding: 4px 10px; font-size: 1em; border: none;}
 .btn { border-radius: 6px; box-shadow: 0 0 3px #888; transition: all 0.2s;}
 .btn:hover { box-shadow: 0 0 6px #888; background-color: #fff;}
 button:hover {cursor: pointer;}
 #root { max-width: 1280px; margin: 0 auto;}
 .wrapper { width: 93%; margin: 0 auto; padding-top: 20px;}
+div.lineDiv { width: 100%; height: 2px; background-color: #AD9A6F;}
 
 /* spin -------------------------- */
 .spinBox { height: 60vh; display: flex; justify-content: center; align-items: center; }
@@ -75,6 +76,12 @@ header > h3 > p { font-family: 'Kablammo', cursive; font-weight: 300; font-size:
 #shopBox > .goodsBox > .goodsImg { width: 100%; height: 70%; background-color: #999;}
 #shopBox > .goodsBox > .goodsBtns { width: 100%; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 15px; }
 
+/* CstAlert --------- */
+#cstAlert { width: 100vw; height: calc(100vh - 187px); background-color: #0006; position: absolute;}
+#cstAlert > #cstMsgBox { width: 20em; height: 10em; padding: 0.7rem 1rem; margin: 0 auto; border-radius: 5px; background-color: #fff; display: flex; flex-direction: column; justify-content: space-evenly; position: relative; top: 25%}
+#cstAlert > #cstMsgBox > *:not(div.lineDiv) { padding: 0 0.6rem;}
+#cstAlert > #cstMsgBox > #cstMsgBtns { display: flex; justify-content: right; gap: 0.7rem;}
+
 /* Field -------------------------- */
 #map { width: 100%; height: 67vh;background-image: url('./assets/potatoField.jpg'); background-size: cover; background-color: #8f8f8f; background-blend-mode: multiply, luminosity; border-radius: 10px; display: flex;}
 #mapArea { width: 85%; height: 85%; margin: auto; position: relative;}
@@ -115,3 +122,14 @@ header > h3 > p { font-family: 'Kablammo', cursive; font-weight: 300; font-size:
 #btmCal > .btmMain > .btmMainDate li.today {border-radius: 10px; background-color: #61563E; color: #fff;}
 #btmCal > .btmMain li.sun { color: #900;}
 #btmCal > .btmMain li.sat { color: #009;}
+
+/* VideoPlayerApp -------------------------- */
+#vPlayer > * {margin-bottom: 0.5rem; text-align: center; font-family: 'Poor Story', cursive;}
+#videoBox {width: 19rem; height: 33.6rem; border-radius: 7px; position: relative; overflow: hidden;}
+#videoBox > div.clkbtn { width: 100%; height: 100%; position: absolute; z-index: 1; display: flex; justify-content: center; align-items: center; }
+#videoBox > div.clkbtn > div { width: 4.5rem; height: 4.5rem; font-size: 3rem; background-color: #111; border-radius: 50%; line-height: 4.9rem; color: #dfdfdf; transition: all 0.4s linear; opacity: 0;}
+#videoBox > video { width: 100%;}
+#timeBox { display: flex; gap: 10px; justify-content: center; align-items: center;}
+#timeBox > p {font-size: 1.1rem;}
+#timeBox > progress { width: 68%;}
+#playerBtns { display: flex; justify-content: center; gap: 0.7rem;}

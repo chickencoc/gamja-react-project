@@ -31,7 +31,7 @@ function App() {
       { menuck === 0 ? <div className='wrapper spinBox'><img className='spin' /></div> : "" }
       { menuck === 1 ? <Diary /> : "" }
       { menuck === 2 ? <Foods /> : "" }
-      { menuck === 3 ? <Shop gamGet={gamGet} setGamGet={setGamGet} /> : "" }
+      { menuck === 3 ? <Shop gamGet={gamGet} setGamGet={setGamGet} gamCount={gamCount} setGamCount={setGamCount} /> : "" }
       { menuck === 4 ? <Field gamCount={gamCount} setGamCount={setGamCount} limNum={limNum} gamGet={gamGet} /> : "" }
     </>
   )

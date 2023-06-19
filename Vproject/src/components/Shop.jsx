@@ -1,30 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import CstAlert from './shop/CstAlert';
 
-const Shop = ({gamGet, setGamGet}) => {
-    const shopGamGet = () => {
-        if(gamGet === 7) {
-            return alert("최대 업그레이드");
-        }
-        setGamGet(gamGet + 1);
-    };
+const Shop = (props) => {
+    const newProps = props;
+    const [cstArt, setCstArt] = useState(false);
 
 
   return (
     <div id="shopBox" className='wrapper'>
-        {
-            [1,2,3,4,5,6].map((e)=> {
-                return (
+        { cstArt && <CstAlert setCstArt={setCstArt} props={newProps} /> }
+        
         <div className='goodsBox'>
             <div className='goodsImg'></div>
             <p>name</p>
-            { gamGet === 7 ? <p>MAX</p> : <div className='goodsBtns'>
-                <p>레벨 : {gamGet}</p>
-                <button className='btn' onClick={shopGamGet}>구매</button>
+            { props.gamGet === 7 ? <p>MAX</p> : <div className='goodsBtns'>
+                <p>레벨 : {props.gamGet}</p>
+                <button className='btn' onClick={() => {setCstArt(true)}}>구매</button>
             </div> }
         </div>
-        )
-            })
-        }
+
     </div>
   )
 }
