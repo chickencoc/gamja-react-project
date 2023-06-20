@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/header'
 import Menu from './components/Menu'
@@ -20,19 +21,20 @@ function App() {
   // 감자 획득
   const [gamGet, setGamGet] = useState(1);
 
-  // menu
-  const [menuck, setMenuck] = useState(0);
-
 
   return (
     <>
-      <Header/>
-      <Menu setMenuck={setMenuck} gamCount={gamCount}/>
-      { menuck === 0 ? <div className='wrapper spinBox'><img className='spin' /></div> : "" }
-      { menuck === 1 ? <Diary /> : "" }
-      { menuck === 2 ? <Foods /> : "" }
-      { menuck === 3 ? <Shop gamGet={gamGet} setGamGet={setGamGet} gamCount={gamCount} setGamCount={setGamCount} /> : "" }
-      { menuck === 4 ? <Field gamCount={gamCount} setGamCount={setGamCount} limNum={limNum} gamGet={gamGet} /> : "" }
+      <BrowserRouter>
+        <Header/>
+        <Menu gamCount={gamCount}/>
+        <Routes>
+          <Route path='/' element={ <div className='wrapper spinBox'><img className='spin' /></div> }></Route>
+          <Route path="/diary" element={ <Diary /> }></Route>
+          <Route path="/food" element={ <Foods /> }></Route>
+          <Route path="/shop" element={ <Shop gamGet={gamGet} setGamGet={setGamGet} gamCount={gamCount} setGamCount={setGamCount} /> }></Route>
+          <Route path="field" element={ <Field gamCount={gamCount} setGamCount={setGamCount} limNum={limNum} gamGet={gamGet} /> }></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

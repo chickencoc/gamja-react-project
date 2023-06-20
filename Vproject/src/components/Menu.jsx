@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Menu( {setMenuck, gamCount} ) {
+function Menu( {gamCount} ) {
 
   return (
     <div id="menuBox">
@@ -9,10 +10,10 @@ function Menu( {setMenuck, gamCount} ) {
             <p id="gamjaCoin"><span title='감자코인'></span>: {gamCount}</p>
         </div>
         <ul id="menuList">
-            <li><a href="#" onClick={() => setMenuck(1)}>수업 내용</a></li>
-            <li><a href="#" onClick={() => setMenuck(2)}>감자 요리</a></li>
-            <li><a href="#" onClick={() => setMenuck(3)}>감자 상점</a></li>
-            <li><a href="#" onClick={() => setMenuck(4)}>감자 밭</a></li>
+            <li><Link to="/diary">수업 내용</Link></li>
+            <li><Link to="/food">감자 요리</Link></li>
+            <li><Link to="/shop">감자 상점</Link></li>
+            <li><Link to="/field">감자 밭</Link></li>
         </ul>
     </div>
   )
