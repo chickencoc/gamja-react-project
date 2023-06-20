@@ -67,7 +67,7 @@ const VideoPlayerApp = () => {
       </div>
       <div id="timeBox">
         <p>0:{Math.round(cur)} / 0:{Math.round(dur)}</p>
-        <progress min={0} value={cur} max={dur} />
+        <progress min={0} max={100} value={dur ? cur / dur * 100 : 0} />
       </div>
       <div id="playerBtns">
         <button id="play" className='btn' onClick={playVideo}>PLAY</button>
