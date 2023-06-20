@@ -42,7 +42,7 @@ div.lineDiv { width: 100%; height: 2px; background-color: #AD9A6F;}
     to {
       transform: rotate(360deg);
     }
-  }
+}
 
 /* Header -------------------------- */
 header  { width: 100%; height: 80px; line-height: 80px; display: flex; justify-content: right; padding-right: 50px; border-bottom: 5px groove #AD9A6F; }
@@ -126,8 +126,27 @@ header > h3 > p { font-family: 'Kablammo', cursive; font-weight: 300; font-size:
 /* VideoPlayerApp -------------------------- */
 #vPlayer > * {margin-bottom: 0.5rem; text-align: center; font-family: 'Poor Story', cursive;}
 #videoBox {width: 19rem; height: 33.6rem; border-radius: 7px; position: relative; overflow: hidden;}
-#videoBox > div.clkbtn { width: 100%; height: 100%; position: absolute; z-index: 1; display: flex; justify-content: center; align-items: center; }
-#videoBox > div.clkbtn > div { width: 4.5rem; height: 4.5rem; font-size: 3rem; background-color: #111; border-radius: 50%; line-height: 4.9rem; color: #dfdfdf; transition: all 0.4s linear; opacity: 0;}
+#videoBox > div.clkbtn { width: 100%; height: 100%; position: absolute; z-index: 1;}
+#videoBox > div.clkbtn > div { width: 4.5rem; height: 4.5rem; font-size: 3rem; background-color: #222; border-radius: 50%; line-height: 4.9rem; color: #dfdfdf; animation: divBtn 1s linear; opacity: 0; display: none; position: inherit; top: 41%; left: 38%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+@keyframes divBtn {
+  1% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  99% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
 #videoBox > video { width: 100%;}
 #timeBox { display: flex; gap: 10px; justify-content: center; align-items: center;}
 #timeBox > p {font-size: 1.1rem;}

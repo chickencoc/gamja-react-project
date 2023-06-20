@@ -9,7 +9,7 @@ function Menu( {setMenuck, gamCount} ) {
             <p id="gamjaCoin"><span title='감자코인'></span>: {gamCount}</p>
         </div>
         <ul id="menuList">
-            <li><a href="#" onClick={() => setMenuck(1)}>감자 일기</a></li>
+            <li><a href="#" onClick={() => setMenuck(1)}>수업 내용</a></li>
             <li><a href="#" onClick={() => setMenuck(2)}>감자 요리</a></li>
             <li><a href="#" onClick={() => setMenuck(3)}>감자 상점</a></li>
             <li><a href="#" onClick={() => setMenuck(4)}>감자 밭</a></li>

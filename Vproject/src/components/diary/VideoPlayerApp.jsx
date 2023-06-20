@@ -41,16 +41,17 @@ const VideoPlayerApp = () => {
     if(버튼) {
       videoRef.current.pause();
       버튼변경(!버튼);
-      
+      이미지[1].style.display = "block";
+      setTimeout(function() {
+        이미지[1].style.display = "none";
+      }, 1000);
     } else {
       videoRef.current.play();
       버튼변경(!버튼);
-      이미지[0].style.opacity = 1;
+      이미지[0].style.display = "block";
       setTimeout(function() {
-        이미지[0].style.transform = "scale(1.2)";
-        이미지[0].style.opacity = 0;
-      }, 300);
-
+        이미지[0].style.display = "none";
+      }, 1000);
     }
   };
 
